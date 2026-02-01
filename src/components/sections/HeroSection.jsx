@@ -81,7 +81,7 @@ export default function HeroSection() {
 
           <div className="relative w-full flex justify-center mb-6">
             <Image
-              src="/images/hero/Datahack-full.png"
+              src="/images/hero/DataHack-full.png"
               alt="Data Hack 3.0"
               width={600}
               height={200}
