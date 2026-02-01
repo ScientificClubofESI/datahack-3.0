@@ -1,4 +1,8 @@
+import Image from 'next/image';
+
 export default function SponsorsSection() {
+  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
+  
   return (
     <section
       id="sponsors"
@@ -9,10 +13,12 @@ export default function SponsorsSection() {
           SPONSORED BY
         </h2>
         <div className="flex items-center justify-center">
-          <img
+          <Image
             src="/images/sponsors/sponsor.png"
-            alt="Yalidine Express"
-            className="w-full max-w-md sm:max-w-lg lg:max-w-xl h-auto"
+            alt="Sponsor Logo"
+            width={isMobile ? 300 : 555}
+            height={isMobile ? 58 : 108}
+            className="object-contain"
           />
         </div>
       </div>
