@@ -73,7 +73,7 @@ export default function Register() {
           </div>
 
           <button
-            onClick={() => (window.location.href = "https://datahack-registration.cse.club/")}
+            onClick={() => (window.location.href = "https://datahack-registration.cse.club")}
             className="group hidden md:flex items-center gap-2 hover:gap-3 transition-all duration-300 cursor-pointer"
           >
             <div className="w-0 group-hover:w-5 transition-all duration-300 overflow-hidden">

@@ -98,7 +98,7 @@ export default function HeroSection() {
 
           <div className="w-full border-t border-[#333333] my-8 md:my-10"></div>
 
-          <button className="group flex items-center justify-center md:self-start gap-2 hover:gap-3 transition-all duration-300 cursor-pointer">
+          <button onClick={() => window.location.href = "https://datahack-registration.cse.club"} className="group flex items-center justify-center md:self-start gap-2 hover:gap-3 transition-all duration-300 cursor-pointer">
             <div className="w-0 group-hover:w-5 transition-all duration-300 overflow-hidden">
             <Image
               src="/images/hero/arrow.svg"
