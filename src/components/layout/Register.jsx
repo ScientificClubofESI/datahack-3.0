@@ -3,7 +3,6 @@ import React, { useEffect, useState } from "react";
 import Image from "next/image";
 
 export default function Register() {
-  const [isHovered, setIsHovered] = useState(false);
   const [isHidden, setIsHidden] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
@@ -47,11 +46,11 @@ export default function Register() {
   return (
     <>
       <nav
-        className={`fixed top-0 left-0 w-full px-4 flex items-center justify-between z-[70] transition-all duration-500 ease-out ${
+        className={`fixed top-0 left-0 w-full px-4 flex items-center justify-between z-70 transition-all duration-500 ease-out ${
           isHidden ? "opacity-0 -translate-y-10 pointer-events-none" : "opacity-100 translate-y-0"
         }`}
       >
-        <div className="w-full max-w-[1440px] mx-auto px-4 sm:px-10 h-20 sm:h-24 flex items-center justify-between">
+        <div className="w-full max-w-360 mx-auto px-4 sm:px-10 h-20 sm:h-24 flex items-center justify-between">
           <div className="relative flex items-center group cursor-pointer h-16 w-24">
             <div className="relative left-3 z-10 transition-transform duration-500 group-hover:scale-105">
               <Image
@@ -74,37 +73,46 @@ export default function Register() {
           </div>
 
           <button
-            onMouseEnter={() => setIsHovered(true)}
-            onMouseLeave={() => setIsHovered(false)}
             onClick={() => (window.location.href = "https://datahack-registration.cse.club/")}
-            className="hidden md:flex group relative items-center gap-2 sm:gap-3 text-white/60 hover:text-white text-base sm:text-lg md:text-xl transition-colors duration-300"
+            className="group hidden md:flex items-center gap-2 hover:gap-3 transition-all duration-300 cursor-pointer"
           >
-            <span className={`transition-transform duration-500 ease-out ${isHovered ? "translate-x-6 sm:translate-x-8" : "translate-x-0"}`}>
-              Register Now
-            </span>
-            <span className={`transition-transform duration-500 ease-out ${isHovered ? "-translate-x-28 sm:-translate-x-36" : "translate-x-0"}`}>
-              <svg width="20" height="20" className="sm:w-6 sm:h-6" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M7 17L17 7M17 7H7M17 7v10" />
-              </svg>
-            </span>
+            <div className="w-0 group-hover:w-5 transition-all duration-300 overflow-hidden">
+              <Image
+                src="/images/hero/arrow.svg"
+                alt="Arrow"
+                width={20}
+                height={20}
+                className="translate-y-[30%] rotate-45 scale-0 group-hover:translate-y-0 group-hover:rotate-0 group-hover:scale-100 duration-500 transition-transform"
+              />
+            </div>
+            <span className="text-white text-xl font-light">Register Now</span>
+            <div className="w-5 group-hover:w-0 transition-all duration-300 overflow-hidden">
+              <Image
+                src="/images/hero/arrow.svg"
+                alt="Arrow"
+                width={20}
+                height={20}
+                className="group-hover:translate-y-[-50%] group-hover:rotate-45 group-hover:scale-0 duration-500 transition-transform"
+              />
+            </div>
           </button>
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden relative w-10 h-10 flex items-center justify-center text-white z-[70]"
+            className="md:hidden relative w-10 h-10 flex items-center justify-center text-white z-70"
             aria-label="Toggle menu"
           >
-            <div className="w-6 h-5 flex flex-col justify-between relative z-[70]">
-              <span className={`w-full h-0.5 bg-white transition-all duration-300 ease-out ${isMobileMenuOpen ? "rotate-45 translate-y-[9px]" : "rotate-0 translate-y-0"}`} />
+            <div className="w-6 h-5 flex flex-col justify-between relative z-70">
+              <span className={`w-full h-0.5 bg-white transition-all duration-300 ease-out ${isMobileMenuOpen ? "rotate-45 translate-y-2.25" : "rotate-0 translate-y-0"}`} />
               <span className={`w-full h-0.5 bg-white transition-all duration-300 ease-out ${isMobileMenuOpen ? "opacity-0" : "opacity-100"}`} />
-              <span className={`w-full h-0.5 bg-white transition-all duration-300 ease-out ${isMobileMenuOpen ? "-rotate-45 -translate-y-[9px]" : "rotate-0 translate-y-0"}`} />
+              <span className={`w-full h-0.5 bg-white transition-all duration-300 ease-out ${isMobileMenuOpen ? "-rotate-45 -translate-y-2.25" : "rotate-0 translate-y-0"}`} />
             </div>
           </button>
         </div>
       </nav>
 
       <div
-        className={`md:hidden fixed inset-0 bg-black/95 backdrop-blur-sm z-[65] transition-all duration-500 ease-out ${
+        className={`md:hidden fixed inset-0 bg-black/95 backdrop-blur-sm z-65 transition-all duration-500 ease-out ${
           isMobileMenuOpen ? "opacity-100 pointer-events-auto" : "opacity-0 pointer-events-none"
         }`}
       >

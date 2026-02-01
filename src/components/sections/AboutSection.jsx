@@ -28,19 +28,18 @@ export default function AboutSection() {
     <section
       id="about"
       ref={sectionRef}
-      className="relative"
-      style={{ height: '300vh' }}
+      className="relative md:h-[300vh]"
     >
-      <div className="sticky top-0 h-screen flex items-center justify-center">
+      <div className="md:sticky md:top-0 h-auto md:h-screen flex items-center justify-center py-12 md:py-20">
         <div className="relative z-10 w-full max-w-7xl px-8 py-20">
           <motion.div
-            className="hidden md:flex flex-row gap-8 items-center justify-start mb-16 md:mb-24"
+            className="hidden md:flex flex-row gap-8 items-center justify-start mb-12"
             style={{ x, willChange: 'transform' }}
           >
             {images.map((image, i) => (
               <div
                 key={image.id}
-                className="relative w-[260px] rounded-lg overflow-hidden shadow-2xl group cursor-pointer flex-shrink-0"
+                className="relative w-65 rounded-lg overflow-hidden shadow-2xl group cursor-pointer shrink-0"
               >
                 <Image
                   src={image.src}
@@ -48,7 +47,7 @@ export default function AboutSection() {
                   width={260}
                   height={i % 2 === 0 ? 320 : 400}
                   className={`w-full ${
-                    i % 2 === 0 ? 'h-[320px]' : 'h-[400px]'
+                    i % 2 === 0 ? 'h-80' : 'h-100'
                   } object-cover grayscale group-hover:grayscale-0 transition-all duration-500`}
                   loading="lazy"
                   quality={85}
@@ -59,7 +58,7 @@ export default function AboutSection() {
 
           <div className="flex flex-row gap-4 items-center justify-center md:hidden">
             <div className="flex flex-col gap-4">
-              <div className="relative w-[160px] h-[180px] rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
+              <div className="relative w-40 h-45 rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
                 <Image
                   src={images[0].src}
                   alt={images[0].alt}
@@ -70,7 +69,7 @@ export default function AboutSection() {
                   quality={85}
                 />
               </div>
-              <div className="relative w-[180px] h-[150px] rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
+              <div className="relative w-45 h-37.5 rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
                 <Image
                   src={images[1].src}
                   alt={images[1].alt}
@@ -84,7 +83,7 @@ export default function AboutSection() {
             </div>
 
             <div className="flex flex-col gap-4">
-              <div className="relative w-[180px] h-[150px] rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
+              <div className="relative w-45 h-37.5 rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
                 <Image
                   src={images[2].src}
                   alt={images[2].alt}
@@ -95,7 +94,7 @@ export default function AboutSection() {
                   quality={85}
                 />
               </div>
-              <div className="relative w-[180px] h-[120px] rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
+              <div className="relative w-45 h-30 rounded-lg overflow-hidden shadow-2xl group cursor-pointer">
                 <Image
                   src={images[3].src}
                   alt={images[3].alt}
@@ -114,8 +113,8 @@ export default function AboutSection() {
               <div className="text-3xl md:text-5xl font-virgo text-white mb-6 tracking-tight">
                 ABOUT CSE
               </div>
-              <p className="text-gray-300 text-lg md:text-xl">
-                The CSE is one of Algeria's largest scientific clubs. Active since
+              <p className="text-[#A4A4A4] text-lg md:text-xl" style={{ fontFamily: '"Century Gothic", -apple-system, sans-serif' }}>
+                The <span className="text-[#E2BFFD] font-semibold">CSE</span> is one of Algeria's largest scientific clubs. Active since
                 2008, it aims to provide{' '}
                 <span className="text-[#E2BFFD] font-semibold">
                   innovative

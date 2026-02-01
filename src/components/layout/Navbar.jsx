@@ -11,7 +11,7 @@ const navItems = [
 ];
 
 const Shape2Icon = ({ className = '' }) => (
-  <div className={`flex-shrink-0 ${className}`} style={{ width: 16, height: 14 }}>
+  <div className={`shrink-0 ${className}`} style={{ width: 16, height: 14 }}>
     <Image src="/images/shape2.png" alt="icon" width={16} height={14} className="object-contain" priority />
   </div>
 );
@@ -79,8 +79,8 @@ export default function Navbar() {
   }, []);
 
   return (
-    <nav className="hidden md:flex fixed bottom-12 left-0 right-0 z-[70] justify-center px-4">
-      <div className="w-full max-w-[1000px] px-6">
+    <nav className="hidden md:flex fixed bottom-12 left-0 right-0 z-70 justify-center px-4">
+      <div className="w-full max-w-250 px-6">
         <div className="grid grid-cols-5 gap-4 items-end">
           {navItems.map((item, index) => {
             const isCurrent = activeSection === item.id;
