@@ -10,32 +10,11 @@ export default function MentorsSection() {
 
   const mentors = [
     {
-      id: 1,
-      name: "Badreddine Sayah",
-      role: "3rd year computer science student at ESI Algiers. Ai Manager at CSE ",
-      description: "Passionate AI enthusiast dedicated to advancing machine learning solutions. Leads innovative projects combining computer science theory with practical applications in artificial intelligence and data science.",
-      image: "/images/mentors/IMG_7722 - SAYAH BADREDDINE.JPG",
-    },
-    {
-      id: 2,
-      name: "Hammani Abdeslem",
-      role: "Fourth-year Intelligent Systems and Data student at ESI Algiers. Backend Developer at Ourquilane.Junior Data ScientistEx Vp at CSE",
-      description: "Experienced backend developer with expertise in building scalable systems. Combines data science skills with robust software engineering to create intelligent, data-driven solutions.",
-      image: "/images/mentors/IMG_0718 - HAMMANI ABDESLEM.jpeg",
-    },
-    {
-      id: 3,
-      name: "Achraf Abdelkebir",
-      role: "Fifth year student at ESI. Data Science & BI Instructor. Former Vice President  at CSE",
-      description: "Skilled data science instructor passionate about teaching business intelligence and analytics. Brings leadership experience and technical expertise to help students master data-driven decision making.",
-      image: "/images/mentors/IMG_3057 - achraf aek.JPG",
-    },
-    {
-      id: 4,
-      name: "Djouider Mokhtar Anes",
-      role: "Third year student at higher national school of computer science. Data Science and ML enthusiast. IA Co-Manager at CSE",
-      description: "Machine learning enthusiast focused on developing innovative AI solutions. Actively contributes to research projects exploring neural networks, deep learning, and intelligent systems.",
-      image: "/images/mentors/20260126_210721 - DJOUIDER MOKHTARANES.jpg",
+      id: 8,
+      name: "OUSSAMA BOUSSAHLA",
+      role: "Fifth year student at USTHB, Data Scientist",
+      description: "Experienced data scientist specializing in statistical analysis and predictive modeling. Transforms complex datasets into actionable insights, driving data-informed strategies across diverse domains.",
+      image: "/images/mentors/Copy of Oussama BOUSSAHLA  - BOUSSAHLA Oussama.jpg",
     },
     {
       id: 5,
@@ -43,6 +22,13 @@ export default function MentorsSection() {
       role: "M1 Bioinformatics student and AI engineer at Edugato",
       description: "Bridges biology and technology through innovative bioinformatics solutions. Specializes in applying AI techniques to solve complex problems in computational biology and medical research.",
       image: "/images/mentors/my-image - Bahae.jpg",
+    },
+    {
+      id: 3,
+      name: "Achraf Abdelkebir",
+      role: "Fifth year student at ESI. Data Science & BI Instructor. Former Vice President  at CSE",
+      description: "Skilled data science instructor passionate about teaching business intelligence and analytics. Brings leadership experience and technical expertise to help students master data-driven decision making.",
+      image: "/images/mentors/IMG_3057 - achraf aek.JPG",
     },
     {
       id: 6,
@@ -57,6 +43,27 @@ export default function MentorsSection() {
       role: " 4th year Computer Systems student at ESfI / Dev Manager at CSE",
       description: "Development manager specializing in computer systems architecture and software engineering. Leads technical teams in building reliable, high-performance systems and mentoring aspiring developers.",
       image: "/images/mentors/2025 - CHOUIDER IKRAM (1).jpg",
+    },
+    {
+      id: 1,
+      name: "Badreddine Sayah",
+      role: "3rd year computer science student at ESI Algiers. Ai Manager at CSE ",
+      description: "Passionate AI enthusiast dedicated to advancing machine learning solutions. Leads innovative projects combining computer science theory with practical applications in artificial intelligence and data science.",
+      image: "/images/mentors/IMG_7722 - SAYAH BADREDDINE.JPG",
+    },
+    {
+      id: 2,
+      name: "Hammani Abdeslem",
+      role: "Fourth-year Intelligent Systems and Data student at ESI Algiers. Backend Developer at Ourquilane.Junior Data ScientistEx Vp at CSE",
+      description: "Experienced backend developer with expertise in building scalable systems. Combines data science skills with robust software engineering to create intelligent, data-driven solutions.",
+      image: "/images/mentors/IMG_0718 - HAMMANI ABDESLEM.jpeg",
+    },
+    {
+      id: 4,
+      name: "Djouider Mokhtar Anes",
+      role: "Third year student at higher national school of computer science. Data Science and ML enthusiast. IA Co-Manager at CSE",
+      description: "Machine learning enthusiast focused on developing innovative AI solutions. Actively contributes to research projects exploring neural networks, deep learning, and intelligent systems.",
+      image: "/images/mentors/20260126_210721 - DJOUIDER MOKHTARANES.jpg",
     },
   ];
 
