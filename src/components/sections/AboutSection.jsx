@@ -7,7 +7,7 @@ import Image from 'next/image'
 export default function AboutSection() {
   const images = useMemo(
     () => [
-      { id: 1, src: '/images/about/first_c.png', alt: 'DATA HACK Event' },
+      { id: 1, src: '/images/about/firstw.JPG', alt: 'DATA HACK Event' },
       { id: 2, src: '/images/about/second_c.png', alt: 'Microsoft Workshop' },
       { id: 3, src: '/images/about/third_c.png', alt: 'Community Gathering' },
       { id: 4, src: '/images/about/forth_c.png', alt: 'University Event' },
