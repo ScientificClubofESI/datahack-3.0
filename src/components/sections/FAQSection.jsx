@@ -6,19 +6,19 @@ import { Plus } from 'lucide-react'
 const faqData = [
   {
     question: "What is the DataHack event?",
-    answer: "DataHack is a premier data science and analytics event that brings together data enthusiasts, professionals, and industry experts. It features workshops, competitions, networking opportunities, and hands-on sessions designed to enhance your data science skills and connect you with the community."
+    answer: "DataHack is a competitive datathon where participants collaborate to analyze real-world datasets and develop AI-driven solutions within 48 hours, fostering innovation, teamwork, and practical learning."
   },
   {
     question: "Who can participate in DataHack?",
-    answer: "DataHack is open to everyone interested in data science, from beginners to experienced professionals. Whether you're a student, working professional, researcher, or entrepreneur, you're welcome to join and learn."
+    answer: "DataHack is open to students and technology enthusiasts interested in data science, artificial intelligence, and innovation. All skill levels are welcome."
   },
   {
-    question: "How do I register for the event?",
-    answer: "Registration is simple! Click on the 'Register Now' button on our homepage, fill in your details, and complete the registration process. You'll receive a confirmation email with all the event details and access information."
+    question: "Where and when will the event take place?",
+    answer: "The 3rd edition of DataHack will be held at ESI from February 12 to 14, 2026."
   },
   {
-    question: "What should I bring to the event?",
-    answer: "Bring your laptop with necessary software pre-installed, a notebook for taking notes, your student/professional ID, and plenty of enthusiasm to learn and network. We'll provide WiFi, refreshments, and all the materials you need for workshops."
+    question: "How many participants are allowed per team?",
+    answer: "Each team can have up to 5 participants. If you don’t have a team, we will help you join one."
   }
 ]
 
