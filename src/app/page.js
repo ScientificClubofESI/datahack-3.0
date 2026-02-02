@@ -1,5 +1,4 @@
 'use client'
-
 import { memo } from 'react'
 import HeroSection from '@/components/sections/HeroSection.jsx'
 import AboutSection from '@/components/sections/AboutSection.jsx'
@@ -38,7 +37,7 @@ const MemoizedFooterSection = memo(FooterSection)
 
 export default function Home() {
   return (
-    <main className="relative">
+    <main className="relative min-h-screen">
       <HeroSection />
       
       {/* Static background - completely isolated, never re-renders */}
