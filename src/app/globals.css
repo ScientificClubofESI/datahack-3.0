@@ -98,18 +98,44 @@
   font-display: swap;
 }
 
-/* Fix white background flashing on scroll */
-html,
-body {
-  background-color: #000000;
-  min-height: 100vh;
-  overflow-x: hidden;
+/* Fix white background flashing on scroll - comprehensive fix */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  background-color: #000000 !important;
+  scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Aspekta', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #000000 !important;
+  min-height: 100vh;
+  overflow-x: hidden;
+  margin: 0;
+  padding: 0;
+}
+
+/* Prevent white flash on overscroll */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000000;
+  z-index: -9999;
+  pointer-events: none;
+}
+
+/* Ensure root element also has black background */
+#__next,
+#root {
+  background-color: #000000;
+  min-height: 100vh;
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -121,12 +147,6 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 800;
 }
 
-/* Optimize scroll performance */
-* {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 /* Hardware acceleration for animations */
 .motion-div,
 [style*="transform"] {
@@ -134,11 +154,6 @@ h1, h2, h3, h4, h5, h6 {
   transform: translateZ(0);
   backface-visibility: hidden;
   perspective: 1000px;
-}
-
-/* Smooth scrolling behavior */
-html {
-  scroll-behavior: smooth;
 }
 
 /* Reduce motion for accessibility */
@@ -156,4 +171,12 @@ html {
 img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
+}
+
+/* Prevent pull-to-refresh white background on mobile */
+@media (max-width: 768px) {
+  body {
+    overscroll-behavior: none;
+    position: relative;
+  }
 }
