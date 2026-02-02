@@ -15,8 +15,8 @@ const workshops = [
   },
   {
     id: 2,
-    title: 'Upcoming !!',
-    subtitle: 'Upcoming !!',
+    title: 'Upcoming...',
+    subtitle: 'Upcoming...',
     description: '',
     isUpcoming: true,
   },
@@ -233,17 +233,8 @@ export default function WorkshopsSection() {
           <div className="flex items-center justify-between mb-8">
             <h2 className="text-white font-virgo text-4xl tracking-wider">WORKSHOPS</h2>
             <div className="text-white text-sm font-mono border border-white/30 px-3 py-1 rounded-lg">
-              {currentMobileWorkshop.isUpcoming ? (
-                <>
-                  <span>!!</span>
-                  <span className="text-white/50"> / {String(workshops.length).padStart(2, '0')}</span>
-                </>
-              ) : (
-                <>
-                  <span>{String(mobileCurrentIndex + 1).padStart(2, '0')}</span>
-                  <span className="text-white/50"> / {String(workshops.length).padStart(2, '0')}</span>
-                </>
-              )}
+              <span>{String(mobileCurrentIndex + 1).padStart(2, '0')}</span>
+              <span className="text-white/50"> / !!</span>
             </div>
           </div>
 
@@ -274,7 +265,7 @@ export default function WorkshopsSection() {
                   <div className="flex items-center justify-center min-h-[16rem]">
                     <h3 className="text-4xl font-bold text-white text-center">
                       {mobileDisplayedText.title}
-                      {isTyping && mobileDisplayedText.title.length < 'Upcoming !!'.length && (
+                      {isTyping && mobileDisplayedText.title.length < 'Upcoming...'.length && (
                         <span className="animate-pulse">|</span>
                       )}
                     </h3>
@@ -389,11 +380,10 @@ export default function WorkshopsSection() {
                 >
                   <motion.span style={{ display: 'inline-block' }}>
                     {useTransform(activeIndex, (latest) => {
-                      const workshop = workshops[latest]
-                      return workshop?.isUpcoming ? '!!' : String(latest + 1).padStart(2, '0')
+                      return String(latest + 1).padStart(2, '0')
                     })}
                   </motion.span>
-                  <span className="text-white/50"> / {String(workshops.length).padStart(2, '0')}</span>
+                  <span className="text-white/50"> / !!</span>
                 </motion.div>
               </div>
             </div>
@@ -442,12 +432,12 @@ export default function WorkshopsSection() {
     <div className="text-left">
       <p className="text-white/40 text-3xl lg:text-4xl font-bold mb-1 min-h-[2.5rem]">
         {currentDesktopWorkshop.isUpcoming
-          ? 'Upcoming!!'
+          ? 'Upcoming...'
           : currentDesktopWorkshop.title}
       </p>
       <p className="text-purple-400/40 text-base lg:text-lg min-h-[1.75rem]">
         {currentDesktopWorkshop.isUpcoming
-          ? 'Upcoming!!'
+          ? 'Upcoming...'
           : currentDesktopWorkshop.subtitle}
       </p>
     </div>
