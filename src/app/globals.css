@@ -89,12 +89,21 @@
   font-style: normal;
   font-display: swap;
 }
+
 @font-face {
   font-family: 'Virgo 01';
   src: url('/fonts/virgo_01/virgo.ttf') format('truetype');
   font-weight: 800;
   font-style: normal;
   font-display: swap;
+}
+
+/* Fix white background flashing on scroll */
+html,
+body {
+  background-color: #000000;
+  min-height: 100vh;
+  overflow-x: hidden;
 }
 
 body {
@@ -111,9 +120,6 @@ h1, h2, h3, h4, h5, h6 {
   font-family: 'Virgo 01', sans-serif;
   font-weight: 800;
 }
-
-
-/* Add this to your globals.css */
 
 /* Optimize scroll performance */
 * {
