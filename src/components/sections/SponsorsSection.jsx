@@ -1,8 +1,6 @@
 import Image from 'next/image';
 
 export default function SponsorsSection() {
-  const isMobile = typeof window !== 'undefined' && window.innerWidth < 768;
-  
   return (
     <section
       id="sponsors"
@@ -13,12 +11,21 @@ export default function SponsorsSection() {
           SPONSORED BY
         </h2>
         <div className="flex items-center justify-center">
+          {/* Mobile Image */}
+          <Image
+            src="/images/sponsors/IMG_1540 1_mobile.svg"
+            alt="Sponsor Logo"
+            width={300}
+            height={58}
+            className="object-contain md:hidden"
+          />
+          {/* Desktop Image */}
           <Image
             src="/images/sponsors/sponsor.png"
             alt="Sponsor Logo"
-            width={isMobile ? 300 : 555}
-            height={isMobile ? 58 : 108}
-            className="object-contain"
+            width={555}
+            height={108}
+            className="object-contain hidden md:block"
           />
         </div>
       </div>
