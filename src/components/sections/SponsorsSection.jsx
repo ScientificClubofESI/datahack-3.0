@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 export default function SponsorsSection() {
   return (
     <section
@@ -9,10 +11,21 @@ export default function SponsorsSection() {
           SPONSORED BY
         </h2>
         <div className="flex items-center justify-center">
-          <img
+          {/* Mobile Image */}
+          <Image
+            src="/images/sponsors/IMG_1540 1_mobile.svg"
+            alt="Sponsor Logo"
+            width={300}
+            height={58}
+            className="object-contain md:hidden"
+          />
+          {/* Desktop Image */}
+          <Image
             src="/images/sponsors/sponsor.png"
-            alt="Yalidine Express"
-            className="w-full max-w-md sm:max-w-lg lg:max-w-xl h-auto"
+            alt="Sponsor Logo"
+            width={555}
+            height={108}
+            className="object-contain hidden md:block"
           />
         </div>
       </div>
