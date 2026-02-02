@@ -5,10 +5,22 @@ import HeroSection from '@/components/sections/HeroSection.jsx'
 import './globals.css'
 
 export const metadata = {
-  title: 'Datahack 3.0',
-  description: 'This is the official website of DataHack 3.0',
+  title: 'DataHack 3.0',
+  description: 'Join DataHack 3.0, the premier data science and AI hackathon by CSE Club at ESI Algiers. Experience 3 days of innovation, workshops, mentorship, and competition with industry experts.',
   icons: {
     icon: '/images/datahack_logo.png', 
+  },
+  openGraph: {
+    title: 'DataHack 3.0',
+    description: 'Join DataHack 3.0, the premier data science and AI hackathon by CSE Club at ESI Algiers. Experience 3 days of innovation, workshops, mentorship, and competition with industry experts.',
+    images: ['/images/image.png'],
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'DataHack 3.0',
+    description: 'Join DataHack 3.0, the premier data science and AI hackathon by CSE Club at ESI Algiers. Experience 3 days of innovation, workshops, mentorship, and competition with industry experts.',
+    images: ['/images/image.png'],
   },
 }
 
