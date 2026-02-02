@@ -30,7 +30,7 @@ export default function FAQSection() {
   }
 
   return (
-    <section id='faq' className="min-h-screen   py-16 px-8 md:py-16">
+    <section id='faq' className="min-h-screen py-16 px-8 md:py-16">
       <div className="max-w-4xl mx-auto">
         <div className="mb-12 sm:mb-16">
           <h1 className="text-5xl sm:text-6xl lg:text-7xl font-virgo text-white tracking-tight">

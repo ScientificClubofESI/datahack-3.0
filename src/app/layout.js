@@ -7,7 +7,7 @@ import './globals.css'
 export const metadata = {
   title: 'Datahack 3.0',
   description: 'This is the official website of DataHack 3.0',
-    icons: {
+  icons: {
     icon: '/images/datahack_logo.png', 
   },
 }
@@ -15,7 +15,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body>
+      <body className="overflow-x-hidden">
         <LoadingScreen />  
         <Register />
         {children}

@@ -151,3 +151,19 @@ img {
   image-rendering: -webkit-optimize-contrast;
   image-rendering: crisp-edges;
 }
+
+html {
+  scroll-behavior: smooth;
+  background: #04080A;
+  overscroll-behavior: none;
+}
+
+body {
+  font-family: 'Aspekta', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  padding: 0;
+  overscroll-behavior: none;
+  background: transparent;
+}
