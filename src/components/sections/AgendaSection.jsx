@@ -7,45 +7,94 @@ export default function AgendaSection() {
   const [activeDay, setActiveDay] = useState(0)
   const sectionRef = useRef(null)
 
-  const agendaDays = [
-    {
-      day: 1,
-      date: 'Fri 14.01.2025',
-      schedule: [
-        { time: '4 PM - 6 PM', activity: 'Check-In' },
-        { time: '6 PM - 8 PM', activity: 'Opening Ceremony & Ice Breaking' },
-        { time: '8 PM - 9 PM', activity: 'Ice Break Activities' },
-        { time: '8 PM - 9 PM', activity: 'Dinner' },
-        { time: '9 PM - 11 PM', activity: 'Hacking Starts' },
-        { time: '11 PM - 12 AM', activity: 'Break' },
-      ],
-    },
-    {
-      day: 2,
-      date: 'Sat 15.01.2025',
-      schedule: [
-        { time: '8 AM - 10 AM', activity: 'Hacking Continues' },
-        { time: '10 AM - 12 PM', activity: 'Workshops & Mentoring' },
-        { time: '12 PM - 2 PM', activity: 'Lunch Break' },
-        { time: '2 PM - 4 PM', activity: 'More Hacking' },
-        { time: '4 PM - 6 PM', activity: 'Midway Checkpoint' },
-        { time: '6 PM - 8 PM', activity: 'Dinner' },
-      ],
-    },
-    {
-      day: 3,
-      date: 'Sun 16.01.2025',
-      schedule: [
-        { time: '8 AM - 10 AM', activity: 'Final Touches' },
-        { time: '10 AM - 12 PM', activity: 'Project Submission' },
-        { time: '12 PM - 2 PM', activity: 'Lunch Break' },
-        { time: '2 PM - 4 PM', activity: 'Final Presentations' },
-        { time: '4 PM - 6 PM', activity: 'Judging' },
-        { time: '6 PM - 8 PM', activity: 'Awards & Closing' },
-      ],
-    },
-  ]
-
+ const agendaDays = [
+  {
+    "day": 1,
+    "date": "Thu 12.02.2026",
+    "schedule": [
+      {
+        "time": "5 PM - 6 PM",
+        "activity": "Check-in"
+      },
+      {
+        "time": "6 PM - 7 PM",
+        "activity": "Opening ceremony"
+      },
+      {
+        "time": "8 PM - 8:30 PM",
+        "activity": "Let the hack begin"
+      },
+      {
+        "time": "8:30 PM - 9:30 PM",
+        "activity": "Dinner break"
+      },
+      {
+        "time": "10 PM - 12 AM",
+        "activity": "Workshop: A (Oussama Boussahla)"
+      },
+      {
+        "time": "12:30 AM - 1:30 AM",
+        "activity": "Workshop: B (X)"
+      }
+    ]
+  },
+  {
+    "day": 2,
+    "date": "Fri 13.02.2026",
+    "schedule": [
+      {
+        "time": "2 AM",
+        "activity": "Midnight break"
+      },
+      {
+        "time": "7 AM - 9 AM",
+        "activity": "Breakfast"
+      },
+      {
+        "time": "12 PM - 3 PM",
+        "activity": "Lunch break"
+      },
+      {
+        "time": "5 PM - 6 PM",
+        "activity": "Coffee break"
+      },
+      {
+        "time": "9 PM - 10 PM",
+        "activity": "Dinner break"
+      }
+    ]
+  },
+  {
+    "day": 3,
+    "date": "Sat 14.02.2026",
+    "schedule": [
+      {
+        "time": "2 AM",
+        "activity": "Midnight break"
+      },
+      {
+        "time": "7 AM - 8 AM",
+        "activity": "Breakfast"
+      },
+      {
+        "time": "12 PM - 12:30 PM",
+        "activity": "Submissions"
+      },
+      {
+        "time": "1 PM - 2 PM",
+        "activity": "Lunch break"
+      },
+      {
+        "time": "3 PM - 4 PM",
+        "activity": "Networking session"
+      },
+      {
+        "time": "4 PM - 5 PM",
+        "activity": "Closing ceremony + announcement of the winners"
+      }
+    ]
+  }
+];
   const { scrollYProgress } = useScroll({
     target: sectionRef,
     offset: ['start start', 'end end'],

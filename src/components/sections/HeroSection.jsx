@@ -75,7 +75,7 @@ export default function HeroSection() {
       <div className="grow flex flex-col items-center justify-center w-full px-6 mb-8">
         <div className="w-full max-w-175 flex flex-col">
           <div className="w-full text-[#A3A3A3] flex justify-between items-center text-sm md:text-base font-normal mb-6 md:mb-8 px-1" style={{ fontFamily: '"Century Gothic", -apple-system, sans-serif' }}>
-            <p>January 14th - 16th</p>
+            <p>February 12th - 14th</p>
             <p>ESI Algiers</p>
           </div>
 
