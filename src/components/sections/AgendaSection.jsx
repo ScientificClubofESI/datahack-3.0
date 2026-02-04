@@ -39,10 +39,6 @@ export default function AgendaSection() {
     "date": "Fri 13.02.2026",
     "schedule": [
       {
-        "time": "12:30 AM - 1:30 AM",
-        "activity": "Workshop: B (X)"
-      },
-      {
         "time": "2 AM",
         "activity": "Midnight break"
       },
