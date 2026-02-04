@@ -31,10 +31,6 @@ export default function AgendaSection() {
       {
         "time": "10 PM - 12 AM",
         "activity": "Workshop: A (Oussama Boussahla)"
-      },
-      {
-        "time": "12:30 AM - 1:30 AM",
-        "activity": "Workshop: B (X)"
       }
     ]
   },
@@ -42,6 +38,10 @@ export default function AgendaSection() {
     "day": 2,
     "date": "Fri 13.02.2026",
     "schedule": [
+      {
+        "time": "12:30 AM - 1:30 AM",
+        "activity": "Workshop: B (X)"
+      },
       {
         "time": "2 AM",
         "activity": "Midnight break"
