@@ -21,7 +21,7 @@ export default function AgendaSection() {
         "activity": "Opening ceremony"
       },
       {
-        "time": "8 PM - 8:30 PM",
+        "time": "7 PM - 8:30 PM",
         "activity": "Let the hack begin"
       },
       {
