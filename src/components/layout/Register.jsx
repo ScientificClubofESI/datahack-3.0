@@ -5,6 +5,12 @@ import Image from "next/image";
 export default function Register() {
   const [isHidden, setIsHidden] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [showClosedMessage, setShowClosedMessage] = useState(false);
+
+  const handleRegisterClick = () => {
+    setShowClosedMessage(true);
+    setTimeout(() => setShowClosedMessage(false), 3000);
+  };
 
   useEffect(() => {
     const footer = document.getElementById("footer");
@@ -72,30 +78,37 @@ export default function Register() {
             </div>
           </div>
 
-          <button
-            onClick={() => (window.location.href = "https://datahack-registration.cse.club")}
-            className="group hidden md:flex items-center gap-2 hover:gap-3 transition-all duration-300 cursor-pointer"
-          >
-            <div className="w-0 group-hover:w-5 transition-all duration-300 overflow-hidden">
-              <Image
-                src="/images/hero/arrow.svg"
-                alt="Arrow"
-                width={20}
-                height={20}
-                className="translate-y-[30%] rotate-45 scale-0 group-hover:translate-y-0 group-hover:rotate-0 group-hover:scale-100 duration-500 transition-transform"
-              />
-            </div>
-            <span className="text-white text-xl font-light">Register Now</span>
-            <div className="w-5 group-hover:w-0 transition-all duration-300 overflow-hidden">
-              <Image
-                src="/images/hero/arrow.svg"
-                alt="Arrow"
-                width={20}
-                height={20}
-                className="group-hover:translate-y-[-50%] group-hover:rotate-45 group-hover:scale-0 duration-500 transition-transform"
-              />
-            </div>
-          </button>
+          <div className="relative">
+            <button
+              onClick={handleRegisterClick}
+              className="group hidden md:flex items-center gap-2 hover:gap-3 transition-all duration-300 cursor-pointer"
+            >
+              <div className="w-0 group-hover:w-5 transition-all duration-300 overflow-hidden">
+                <Image
+                  src="/images/hero/arrow.svg"
+                  alt="Arrow"
+                  width={20}
+                  height={20}
+                  className="translate-y-[30%] rotate-45 scale-0 group-hover:translate-y-0 group-hover:rotate-0 group-hover:scale-100 duration-500 transition-transform"
+                />
+              </div>
+              <span className="text-white text-xl font-light">Register Now</span>
+              <div className="w-5 group-hover:w-0 transition-all duration-300 overflow-hidden">
+                <Image
+                  src="/images/hero/arrow.svg"
+                  alt="Arrow"
+                  width={20}
+                  height={20}
+                  className="group-hover:translate-y-[-50%] group-hover:rotate-45 group-hover:scale-0 duration-500 transition-transform"
+                />
+              </div>
+            </button>
+            {showClosedMessage && (
+              <div className="absolute right-0 top-full mt-4 bg-purple-600/90 backdrop-blur-sm text-white px-6 py-3 rounded-lg shadow-lg animate-in slide-in-from-top-2 fade-in duration-300 whitespace-nowrap z-70">
+                <p className="text-sm">Registrations are closed. Thank you for your interest!</p>
+              </div>
+            )}
+          </div>
 
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
